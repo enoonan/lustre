@@ -65,13 +65,17 @@ in any of these examples to start a development server and head over to
 [`lustre/ui`](https://hexdocs.pm/lustre_ui/) is a separate package published by us
 to provide a collection of robust styled elements for folks that want to get working
 with Lustre ASAP. Each of these examples have been written to use elements from
-that package.
+that package. 
 
-Lustre's development server can be configured to include the `lustre/ui` stylesheet
-by passing the `--use-example-styles` flag:
+To use `lustre/ui` in your own projects, you will need to be sure to load the 
+`lustre/ui` stylesheet. In these examples, the stylesheet is already included for 
+you in `index.html`:
 
-```sh
-gleam run -m lustre/dev start --use-example-styles
+```html
+    <link
+      rel="stylesheet"
+      href="./build/dev/javascript/lustre_ui/priv/static/lustre-ui.css"
+    />
 ```
 
 It's not necessary to use `lustre/ui` to use Lustre or to check out any of these
